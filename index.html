@@ -14,25 +14,26 @@
   </head>
 
   <body>
-    <div class="header">
-      <h1>Welcome to our Wildlife Website</h1>
-    </div>
+    <header>
+      <div class="header">
+        <h1>Welcome to our Wildlife Website</h1>
+      </div>
 
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
 
-      <form class="search">
-        <label for="Search"></label>
-        <input type="search" name="q" placeholder="Search query">
-        <input type="submit" value="Go!">
-      </form>
-    </nav>
-
+        <form class="search">
+          <label for="Search"></label>
+          <input type="search" name="q" placeholder="Search query" id="Search"> <!-- for a <label> element to work semantically, the for="" attribute must include the targeted input's ID -->
+          <input type="submit" value="Go!">
+        </form>
+      </nav>
+    </header> <!-- a <header> element is useful to add for screen readers and SEO -->
     <main>
       <article>
         <h2>The trouble with Bears</h2>
@@ -74,6 +75,7 @@
             </tr>
           </tbody>
         </table>
+        <!-- Nailed the table accessiblity, great job! -->
 
         <h2>Habitats and Eating habits</h2>
       
@@ -96,66 +98,68 @@
           
           <p>It looks like your browser doesn't support HTML5 audio players. Here is a link to the <a href="media/bear.mp3">audio file</a> you can listen to.</p>
         </audio>
-        <div transcript-container>
+        <div class="transcript-container">
           <h3>Transcript</h3>
           <p>This is not really an audio file about bears. But, it is an audio file you can transcribe.</p>
         </div>
 
         <aside>
 
-        <h3>About the author </h3>
+          <h3>About the author </h3>
 
-          <p>Evan Wild is an unemployed plumber from Doncaster, who has been really "in to" wildlife since childhood. He once went to Chester Zoo on holiday, but got ill after eating a doner kebab.</p>
-          <p>He has never seen a bear, but once read a Daily Mail article about them, and thinks they sound cool.</p>
+            <p>Evan Wild is an unemployed plumber from Doncaster, who has been really "in to" wildlife since childhood. He once went to Chester Zoo on holiday, but got ill after eating a doner kebab.</p>
+            <p>He has never seen a bear, but once read a Daily Mail article about them, and thinks they sound cool.</p>
 
         </aside>
 
 
-<section class="comments">
-  <button class="show-hide" id="showCommentsButton" aria-label="Show comments" onclick="toggleComments()">Show comments</button>
-  <div id="commentsSection">
- 
+        <section class="comments">
+<button class="show-hide" id="showCommentsButton" aria-label="Show comments" onclick="toggleComments()">Show comments</button>
+<div id="commentsSection">
 
 
-          <div class="comment-wrapper">
 
-            <h3>Add comment</h3>
+        <div class="comment-wrapper">
 
-            <form class="comment-form">
-              <div class="flex-pair">
-                <p>Your name:</p>
-                <input type="text" name="name" id="name" placeholder="Enter your name">
-              </div>
-              <div class="flex-pair">
-                <p>Your comment:</p>
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
-              </div>
-              <div>
-                <input type="submit" value="Submit comment">
-              </div>
-            </form>
+          <h3>Add comment</h3>
 
-            <h3>Comments</h3>
+          <form class="comment-form">
+            <div class="flex-pair">
+              <label for="name">Your name:</label> <!-- these would have worked best with <label> elements -->
+              <input type="text" name="name" id="name" placeholder="Enter your name">
+            </div>
+            <div class="flex-pair">
+              <label for="comment">Your comment:</label> <!-- these would have worked best with <label> elements -->
+              <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+            </div>
+            <div>
+              <input type="submit" value="Submit comment">
+            </div>
+          </form>
 
-            <ul class="comment-container">
+          <h3>Comments</h3>
 
-              <li>
+          <ul class="comment-container">
 
-                <p>Bob Fossil</p>
+            <li>
 
-                <p>Oh I am so glad you taught me all about the big brown angry guys in the woods. With their sniffing little noses and their bad attitudes, they can sure be a menace — I was thinking of putting them all in a truck and driving them outta here. I run a zoo, you know.</p>
+              <p>Bob Fossil</p>
 
-              </li>
+              <p>Oh I am so glad you taught me all about the big brown angry guys in the woods. With their sniffing little noses and their bad attitudes, they can sure be a menace — I was thinking of putting them all in a truck and driving them outta here. I run a zoo, you know.</p>
 
-            </ul>
+            </li>
 
-          </div>
+          </ul>
+
+        </div>
+      </div>
         </section>
       </article>
 
-      <div class="secondary">
-        <h3>Related</h3>
+    <div class="secondary">
+      <h3>Related</h3>
 
+      <nav>
         <ul>
           <li><a href="#">The trouble with Bees</a></li>
           <li><a href="#">The trouble with Otters</a></li>
@@ -163,7 +167,8 @@
           <li><a href="#">The trouble with Octopi</a></li>
           <li><a href="#">The trouble with Lemurs</a></li>
         </ul>
-      </div>
+      </nav>
+    </div>
     </main>
 
     <footer>
